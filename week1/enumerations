@@ -1,0 +1,26 @@
+//Enumerations – adjusting start #s, setting values
+
+std::cout << "Hello user, Let's look at enumerations \n";
+enum state{negative=8, positive, neutral=55,defaultt}; // Older style enum called state of type int
+
+state stateVariable = state::negative; // in order to use these conditions we create an "instance" -
+cout << "\n\tnegative = "<<stateVariable;
+
+if (stateVariable == state::negative) // test condition 1 which hs been set to 8
+{
+    cout << "\n\t\tstateVariable matched the state::negative ";
+    stateVariable = state::positive; // the next state will automatically increment by 1
+    cout << "\n\t" << stateVariable;
+}
+
+if (stateVariable == state::positive) // test cond 2
+{
+    cout << "\n\t\tstateVariable matched the state::positive ";
+    stateVariable = state::neutral; // set 3rd condition to a new non-sequential #
+    cout << "\n\t" << stateVariable;
+}
+
+if (stateVariable == state::neutral)
+    cout << "\n\t\tstateVariable matched the state::neutral ";
+    cout << "\n\t" << stateVariable<<"\tdefault = "<<defaultt; // note how defaultt picks up where neutral leaves
+return 0;

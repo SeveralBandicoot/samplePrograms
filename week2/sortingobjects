@@ -1,0 +1,16 @@
+void bubbleSort(Inventory array[], int size)
+{
+bool madeAswap = true; // This allows the for loop to begin iterating
+for (int maxElement = size − 1; maxElement > 0 && madeAswap; maxElement−−)
+{
+madeAswap = false; // No swaps have occurred yet on this pass
+for (int index = 0; index < maxElement; index++)
+{
+if (array[index].getCode() > array[index + 1].getCode())
+{
+swap(array[index], array[index + 1]);
+madeAswap = true;
+}
+}
+}
+}

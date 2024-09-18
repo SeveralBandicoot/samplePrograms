@@ -1,0 +1,29 @@
+/*
+Template creates a "reuseable" Function
+Automatically swapping out Data Types
+*/
+#include <iostream>
+using namespace std;
+template <class Example> // Template
+declaration with "swap-Out" variable named
+Example firstOrder(Example a, Example b) // Function//Class//Template
+Header
+{
+if (a > b) // Function
+Body
+return a;
+else
+return b;
+}
+int main()
+{
+int a, b;
+cout << "\nenter 2 #s ";
+cin >> a >> b;
+cout << "\n\t\tlargest = " << firstOrder(a, b);
+char x, y;
+cout << "\n\n Enter 2 Characters ";
+cin >> x >> y;
+cout << "\n\t\tlargest = " << firstOrder(x, y);
+return 0;
+}

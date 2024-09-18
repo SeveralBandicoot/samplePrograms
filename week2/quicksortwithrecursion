@@ -1,0 +1,14 @@
+//
+
+void quickSort(int arr[], int start, int end)
+{
+if (start < end)
+{
+// Partition the array and get the pivot point
+int p = partition(arr, start, end);
+// Sort the portion before the pivot point
+quickSort(arr, start, p - 1);
+// Sort the portion after the pivot point
+quickSort(arr, p + 1, end);
+}
+}

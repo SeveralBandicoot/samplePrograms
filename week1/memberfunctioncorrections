@@ -1,0 +1,14 @@
+//Correcting errors with member Functions
+cout << prompt;
+cin >> fscore;
+
+while (fscore < 0 || fscore > 100 || cin.fail())
+{
+    while (cin.fail())
+    {
+        cin.clear(); // flush out Bad data type
+        cin.ignore(); // reset buffer, ready for next input
+    }
+cout << "\renter a valid score 1-100 ";
+cin >> fscore;
+}

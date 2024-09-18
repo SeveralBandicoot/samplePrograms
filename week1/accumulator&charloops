@@ -1,0 +1,31 @@
+int total{ 0 };// accumulator must = 0
+int main()
+{
+std::cout << "Accumulator will total 5 scores ";
+int score{};
+int i{};
+for (i = 1; i <= 3; i++)
+{
+std::cout << "\nEnter score " << i << " ";// Prompt user & enter score
+std::cin >> score;
+total = total + score;
+std::cout << "\n\ntotal = " << total;// Display total
+}
+std::cout << "\n\ni = " << i;
+std::cout << "\n\ntotal = " << total;
+
+// ============================================
+
+//Char increment
+int main()
+{
+char letter;
+cout << "Please, enter a character: ";
+cin >> letter;
+cout << "\n";
+for (char a = 'A'; a <=letter; a++)
+{
+cout << a << " ";
+}
+return 0;
+}

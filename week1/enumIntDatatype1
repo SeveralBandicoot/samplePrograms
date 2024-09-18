@@ -1,0 +1,17 @@
+//Enum data type is integer starting at 0
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    std::cout << "Hello user, Let's look at enumerations \n";
+    enum state { negative, positive, neutral }; // Older style enum called state of type int
+    cout << "\n\tState::enum neg = " << state::negative; // display the state of each Enum
+    cout << "\n\tS = " << state::neutral;
+    state stateVariable = state::negative; // create and initialize a "state variable"
+    cout << "\n\tSv = " << stateVariable;
+    stateVariable = state::positive; // change the condition
+    cout << "\n\tSv = " << stateVariable; // cout< can stream an older enum
+return 0;
+}

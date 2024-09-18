@@ -1,0 +1,144 @@
+Efficiency of Algorithms
+• Normal Search has an O factor of n number of elements
+for(int I = 1; I <= n; i++)
+• Selection Algorithms have an O factor of n^2
+for(int I = 1; I <= n; i++)
+for(int I = 1; I <= n; i++)
+• Binary search has an O factor of log2 n
+Int x[7] = {2,4,6,8,9,12,15} 
+Search for 12
+
+x[first] =2, x[middle] = 8, x[last] = 15    
+x[1st] = 8, x[middle] = 9, x[last] = 15
+x[1st] = 9, x[middle] = 12, x[last] = 15
+
+========================================================
+Types of O algorithms
+1. O(1) = constant time (no need to loop)
+2. O(log2n) = binary searches
+3. O(n) = sequential search
+4. O(n2) = bubble sort & nested loops
+
+=========================================================
+Sorting data – Ascending & Descending order
+• Bubble Sort
+• Efficient Bubble Sort
+• Sort characters, strings
+• Selection Sort
+• Quick Sort
+=========================================================
+BubbleSort - Send an Array
+The Big O notation for the Bubble Sort algorithm is O(n^2).
+• Bubble sort is a simple Nested Loop
+• Starts with the 1st element and then compares it to it’s neighbor. If needed they
+are swapped or else skipped.
+• Then the inner loop is incremented to compare the next 2 elements and swaps or
+keeps their position.
+• After the inner loop is exhausted the 1st element is in place and the outer loop
+increments and reruns the inner loop to place the 2nd data value in place
+• Time Complexity Analysis:
+• In the worst-case scenario, where the list is in reverse order,
+bubble sort will require the maximum number of iterations to sort
+the list.
+• In Big O notation, we drop constant factors and lower-order terms,
+so the time complexity of bubble sort is O(n^2).
+=========================================================
+Efficient Bubble Sort – note the decrement
+
+• The Big O notation for the efficient version of the Bubble Sort algorithm is still
+O(n^2).
+• Efficient Bubble Sort is a variation of the classic Bubble Sort that adds an
+additional flag to check whether any swaps were made during a pass through the
+list.
+• If no swaps are made in a pass, it means the list is already sorted, and the
+algorithm can terminate early. This optimization can improve the performance of
+the algorithm in certain cases, but it does not change the overall time complexity.
+=========================================================
+Selection Sort – faster & more efficient
+
+• Selection sort is a comparison-based sorting
+algorithm that divides the input list into two
+parts:
+• the sorted part at the beginning and
+• the unsorted part at the end.
+• The algorithm repeatedly selects the smallest
+(or largest) element from the unsorted part and
+swaps it with the first element of the unsorted
+part. This process is repeated until the entire list
+is sorted.
+• In Big O notation, we drop constant factors
+and lower-order terms, so the
+• time complexity of selection sort is O(n^2).
+
+=========================================================
+QuickSort depends upon Recursion
+• Quicksort is implemented recursively as follows:
+=========================================================
+
+Select thr pivot
+
+• At the beginning, both the left and right areas are empty; that is, i = from - 1 and
+• j = to + 1.
+• Then keep incrementing i while a[i] < pivot and keep decrementing j while a[j] >
+• pivot. Figure 4 shows i and j when that process stops.
+• Now swap the values in positions i and j, increasing both areas once more. Keep going
+• while i < j. Here is the code for the partition method
+===========================================================
+Sorting objects – we must decide which will be
+key
+=========================================================
+Swap function to swap all 3 elements of array
+void swap(Inventory &a, Inventory &b)
+{
+Inventory temp = a;
+a = b;
+b = temp;
+}
+Notice that when two objects are out of order and must be swapped, an
+entire object can be moved in a single statement.
+It isn’t necessary to move each of the member variables one by one.
+=========================================================
+Searches
+• Linear search  example 1 – 100 in order to guess a # (up or down)
+• Alternate Linear search (1, 100, 2, 99, 3, 98...)
+• Midpoint alternate search (50, 49, 51, 48, 52, 47...)
+• When we can quantify (use < and >)  Search can be reduced to 7 guesses
+• Binary Search - Show midpoint quantified search  50, 75, 87, 80, 83, 85, 84
+=========================================================
+Linear Searches in Arrays & Vectors
+
+• The Big O notation for a linear search algorithm is O(n).
+• Linear search / sequential search
+• Checks each element in a list or array one by one, starting from the
+beginning, until it finds the target element or reaches the end of
+the list.
+• In the worst-case scenario, the target element may be the last
+element in the list, and in this case, the algorithm would have to
+check every element in the list before finding the target or
+concluding that the target is not present. Therefore, the time
+complexity of a linear search is directly proportional to the number
+of elements in the list, which is denoted as 'n’.
+• As the number of elements 'n' increases, the linear search will
+require more iterations to complete. Hence, the time complexity
+is linear, and it is expressed as O(n) in Big O notation.
+=========================================================
+Binary Search requires data be Sorted
+
+• The Big O notation for a binary search algorithm is O(log n).
+• Binary search must be sorted first.
+• It repeatedly divides the search space in half by comparing the target element with the middle element of the list. If
+the middle element is equal to the target, the search is successful.
+• Otherwise, it narrows down the search space to the lower or upper half, depending on whether the target is smaller or
+larger than the middle element. This process continues until the target element is found or the search space becomes
+empty.
+Time Complexity Analysis:
+In each iteration of the binary search, the search space is halved, which means the
+algorithm eliminates half of the remaining elements at each step. This leads to a
+logarithmic time complexity.
+Let's consider an example with n elements in the sorted list:
+In the first iteration, the search space has n elements.
+In the second iteration, the search space has n/2 elements.
+In the third iteration, the search space has n/4 elements.
+In the kth iteration, the search space has n/2^k elements
+Therefore, the number of iterations needed for binary search is logarithmic to the size of
+the list. In Big O notation, we express the time complexity as O(log n).

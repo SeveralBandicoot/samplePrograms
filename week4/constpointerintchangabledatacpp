@@ -1,0 +1,39 @@
+
+/* int pointer & Functions
+*/
+#include <iostream>
+using namespace std;
+void functx(const int*);
+void functy(int*);
+int main()
+{
+int x = 5;
+functx(&x);
+cout << "\n\treturn from const data x = " << x;
+functy(&x);
+cout << "\n\treturn from changeable data x = " << x;
+cout << endl;
+return 0;
+}
+void functx(const int* xPtr)
+{
+cout << "\nstarting x = " << *xPtr;
+//*xPtr = 55; // trying to modify the pointer is an error
+because data was sent const
+}
+void functy(int* xPtr)
+{
+cout << "\nstarting x = " << *xPtr;
+*xPtr = 55; // cgangeable pointer with changeable data is fine
+}
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+// Tips for Getting Started:
+// 1. Use the Solution Explorer window to add/manage files
+// 2. Use the Team Explorer window to connect to source control
+// 3. Use the Output window to see build output and other messages
+// 4. Use the Error List window to view errors
+// 5. Go to Project > Add New Item to create new code files, or Project > Add
+Existing Item to add existing code files to the project
+// 6. In the future, to open this project again, go to File > Open > Project and
+select the .sln file

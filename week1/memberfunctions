@@ -1,0 +1,20 @@
+//Member Functions
+std::cout << "Member Functions to test Error Conditions";
+
+cout << "\n\t\tBefore the errors, we have the Original State: ";
+
+cout << "\n\tcin.bad( ) = " << cin.bad();
+cout << "\n\tcin.eof( ) = " << cin.eof();
+cout << "\n\tcin.good( ) = " << cin.good();
+cout << "\n\tcin.fail( ) = " << cin.fail();
+cout << "\n\tcin.rdstate( ) = " << cin.rdstate();
+
+int x = 5;
+cout << "\nenter a number ";
+cin >> x;
+
+cout << "\n\tcin.bad( ) = " << cin.bad();// critical File read error
+cout << "\n\tcin.eof( ) = " << cin.eof();// set when we reach the end of the file (try to go beyond)
+cout << "\n\tcin.good( ) = " << cin.good();// set when there are no reported errors for fail, bad or oef bits
+cout << "\n\tcin.fail( ) = " << cin.fail();// set when format/data type errors occur
+cout << "\n\tcin.rdstate( ) = " << cin.rdstate();// returns the stream's error state

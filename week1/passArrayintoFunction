@@ -1,0 +1,17 @@
+//Passing an array to a Function
+
+void passArray(int [], int);
+int main()
+{
+int pn = 0;
+Int box[7]{ 0,3,4,1,5,2,6 };
+passArray(box, pn + 5);
+Return 0;
+}
+void passArray(int box[], int pn)
+{
+for (int i = 0; i < pn; i++)
+{
+cout << " " << box[i] << " -- ";
+}
+}

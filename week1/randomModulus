@@ -1,0 +1,22 @@
+//Random #’s -- % Modulous
+#include<cstdlib>// needed for rand( ) functions
+#include<ctime>// needed for time(0)
+#include <iostream>
+using namespace std;
+int sixCounter{ 0 };
+int main()
+{
+    std::cout << "Hello user, Let's look at random #'s ";
+    srand(static_cast<int>(time(0)));// reshuffle the random generator
+
+for (int i = 1; i <= 100; i++)// 100 rolls
+{
+    int x = 1 + rand() % 6;// roll a 6-sided dice
+    if (x == 6)// count the # of times a 6 is rolled
+    {
+        cout << "\na six ";
+        sixCounter++;
+    }
+    cout << " " << x;
+}
+cout << "\n\ta 6 was rolled " << sixCounter;

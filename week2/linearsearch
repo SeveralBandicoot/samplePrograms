@@ -1,0 +1,18 @@
+int linearSearch(const int arry[], int size, int value)
+{
+int index = 0; // Used as a subscript to search the array
+int position = −1; // Used to record the position of search value
+bool found = false; // Flag to indicate if the value was found
+// Initialized to false because the
+// value has not been found yet
+while (index < size && !found)
+{
+if (arry[index] == value) // If the value is found
+{
+found = true; // Set the flag
+position = index; // Record the value's subscript
+}
+index++; // Go to the next element
+}
+return position; // Return the position, or −1
+}

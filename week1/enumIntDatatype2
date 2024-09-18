@@ -1,0 +1,34 @@
+//Creating Enum variables
+
+#include <iostream>
+using namespace std;
+int main() {
+    std::cout << "Hello user, Let's look at enumerations \n";
+    
+    enum state { negative, positive, neutral }; // Older style enum called state of type int
+    
+    cout << "\n\tState::enum neg = " << state::negative; // display the state of each Enum
+    cout << "\n\tS = " << state::neutral;
+    state stateVariable = state::negative; // create and initialize a "state variable"
+    cout << "\n\tSv = " << stateVariable;
+    stateVariable = state::positive; // change the condition
+    cout << "\n\tSv = " << stateVariable; // cout< can stream an older enum
+    int x = 0;int y = 1;int z = 2;
+    
+    if (x == state::negative) // variable x is compared to a state::{const}
+        cout << "\n\t\tint x matched the defined state::neg ";
+
+    if (y == stateVariable) // variable y is compared to an 'instance'/variable created in the enum
+        cout << "\n\t\tint y matched the instance stateVariable";
+
+    if (stateVariable == state::negative) // "instance" compared to all 3 const states
+        cout << "\n\t\tstateVariable matched the state::negative ";
+
+    if (stateVariable == state::positive)
+        cout << "\n\t\tstateVariable matched the state::positive ";
+
+    if (stateVariable == state::negative)
+        cout << "\n\t\tstateVariable matched the state::neutral ";
+    
+    return 0;
+}

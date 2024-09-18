@@ -1,0 +1,19 @@
+void selectionSort(vector<string> &v)
+{
+int minIndex;
+string minValue;
+for (int start = 0; start < (v.size() − 1); start++)
+{
+    minIndex = start;
+    minValue = v[start];
+    for (int index = start + 1; index < v.size(); index++)
+    {
+        if (v[index] < minValue)
+        {
+            minValue = v[index];
+            minIndex = index;
+        }
+    }
+    swap(v[minIndex], v[start]);
+    }
+}

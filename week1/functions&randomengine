@@ -1,0 +1,19 @@
+//Functions & random engine
+• #include <iostream>
+• #include <random>// needed for random engine
+• #include <ctime>// needed for seed time( )
+• using namespace std;
+• int loop[4]{ 100, 12, 6, 3 }; //stores the range for each list of numbers
+• int main()
+• {
+• default_random_engine engine{ static_cast<unsigned int>(time(0)) };
+• for (int i = 0; i < 4; i++) //goes to each range (100, 12, 6, 3)
+• {
+• uniform_int_distribution<int> randomNum{ 1, loop[i] }; //gets random number between 1 and loop[i] (100, 12, 6, or 3)
+• for (int j = 0; j < 20; j++) //repeats to get 20 numbers
+• {
+• cout << randomNum(engine) << " "; //display numbers
+• }
+• cout << "\n\n"; //goes to next line
+• }
+• }

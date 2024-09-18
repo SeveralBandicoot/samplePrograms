@@ -1,0 +1,16 @@
+void bubbleSort(int array[], int size)
+{
+    bool madeAswap = true;
+    for (int max = size − 1; max > 0 && madeAswap; max−−)
+    {
+        madeAswap = false;
+        for (int index = 0; index < max; index++)
+        {
+            if (array[index] > array[index + 1])
+            {
+                swap(array[index], array[index + 1]);
+                madeAswap = true;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+/*
+Template with
+a = Call-by-Value
+b = Call-by-Reference
+Note which changes
+*/
+#pragma warning(disable : 4996)
+#include <iostream>
+using namespace std;
+template <class Example>
+Example firstOrder(Example a, Example& b)
+{
+if (a > b)
+{
+a++;
+b++;
+return a;
+}
+else
+{
+a++;
+b++;
+return b;
+}
+}
+int main()
+{
+int a, b;
+cout << "\nenter 2 #s ";
+cin >> a >> b;
+cout << "\n\t\t1st = " << firstOrder(a, b);
+char x, y;
+cout << "\n\n Enter 2 Characters ";
+cin >> x >> y;
+cout << "\n\t\t1st = " << firstOrder(x, y);
+cout << "\n\n\t\ta&b = " << a << " & " << b;
+cout << "\n\t\tx&y = " << x << " & " << y;
+return 0;
+}
